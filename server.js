@@ -26,7 +26,3 @@ https
 	.listen(portHttps, () => {
 		console.log(`listen on https://localhost:${portHttps}`);
 	});
-
-app.listen(port, () => {
-	console.log(`listen on https://localhost:${port}`);
-});
