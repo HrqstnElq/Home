@@ -21,6 +21,6 @@ https
 		},
 		app
 	)
-	.listen(port, () => {
+	.listen(port, "0.0.0.0", () => {
 		console.log(`listen on https://localhost:${port}`);
 	});
