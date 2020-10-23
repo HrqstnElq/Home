@@ -13,14 +13,6 @@ app.get("/", function (req, res) {
 	res.render("index.html");
 });
 
-https
-	.createServer(
-		{
-			key: fs.readFileSync("private.key"),
-			cert: fs.readFileSync("certificate.crt"),
-		},
-		app
-	)
-	.listen(port, "0.0.0.0", () => {
-		console.log(`listen on https://localhost:${port}`);
-	});
+app.listen(port, "0.0.0.0", () => {
+	console.log(`listen on https://localhost:${port}`);
+});
