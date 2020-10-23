@@ -1,5 +1,8 @@
 const express = require("express");
 const path = require("path");
+const https = require("https");
+const fs = require("fs");
+
 const port = process.env.PORT || 8080;
 const app = express();
 
@@ -10,6 +13,14 @@ app.get("/", function (req, res) {
 	res.render("index.html");
 });
 
-app.listen(port, () => {
-	console.log("listen : ", port);
-});
+https
+	.createServer(
+		{
+			key: fs.readFileSync("surge.key"),
+			cert: fs.readFileSync("surge.crt"),
+		},
+		app
+	)
+	.listen(port, () => {
+		console.log(`listen on https://localhost:${port}`);
+	});
