@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1138f7ab-4e8b-4d0d-9253-b67105b80100/resourceGroups/huutri/providers/Microsoft.Web/sites/nhadam",
+    "appService.deploySubpath": "."
+}
