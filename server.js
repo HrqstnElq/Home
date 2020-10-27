@@ -4,7 +4,6 @@ const https = require("https");
 const fs = require("fs");
 
 // const port = process.env.PORT || 8080;
-const port = 80;
 const portHttps = 443;
 const app = express();
 
